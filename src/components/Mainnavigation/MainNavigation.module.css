@@ -36,29 +36,25 @@
   transform: scaleX(1);
   transform-origin: right;
 }
-.navigation-link::before {
+
+.navigation-link::before,
+.navigation-link::after {
   content: "";
-  position: absolute;
   left: 0;
-  bottom: 0;
+  position: absolute;
   background-color: currentColor;
   height: 1px;
   width: 100%;
   transform: scaleX(0);
-  transform-origin: right;
   transition: transform 0.35s ease-in-out;
 }
 .navigation-link::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  background-color: currentColor;
-  height: 1px;
-  width: 100%;
-  transform: scaleX(0);
+  bottom: 0;
   transform-origin: left;
-  transition: transform 0.35s ease-in-out;
+}
+.navigation-link::before {
+  top: 0;
+  transform-origin: right;
 }
 /* 
 content: "";
