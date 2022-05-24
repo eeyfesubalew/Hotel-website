@@ -2,6 +2,7 @@ import React from "react";
 import giftIcon from "../../assets/gift.svg";
 import cartIcon from "../../assets/shopping-cart.svg";
 import classes from "./MainNavigation.module.css";
+import logo from "../../assets/logo.svg";
 const MainNavigation = () => {
   return (
     <div className={classes["nav-container"]}>
@@ -9,7 +10,7 @@ const MainNavigation = () => {
         <ul className={classes["navigation-list"]}>
           <li className={classes["navigation-listitem"]}>
             <a className={classes["navigation-link"]} href="#">
-              expences and offers
+              EXPERIENCES and offers
             </a>
           </li>
           <li className={classes["navigation-listitem"]}>
@@ -29,6 +30,11 @@ const MainNavigation = () => {
           </li>
         </ul>
 
+        <div className={classes["logo-container"]}>
+          <a href="#">
+            <img src={logo} className={classes.logo} />
+          </a>
+        </div>
         <div className={classes.leftnavcontainer}>
           <a
             href="#"

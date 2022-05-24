@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500&display=swap");
+
+.main-container {
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 28px;
+}
+.main-heading {
+  font-size: 5.5rem;
+  font-weight: 200;
+  line-height: 1;
+}
+.main-content {
+  justify-content: center;
+  width: 50%;
+  display: flex;
+  margin: 0 auto;
+  /* justify-content: space-between; */
+  align-items: center;
+  padding: 35px 0;
+}
+.temperature {
+  padding-right: 30px;
+  position: relative;
+}
+.temperature:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 15px;
+  height: 100%;
+  width: 0.8px;
+  background-color: currentColor;
+}
+.scroll {
+  margin-top: 7.5rem;
+  position: absolute;
+  left: 50%;
+  width: 0.5px;
+  height: 5rem;
+  background-color: rgba(251, 249, 249, 0.2);
+  overflow: hidden;
+}
+.scroll::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  background-color: rgba(251, 249, 249, 0.8);
+  animation: scroll 3s ease-in-out infinite;
+  transform-origin: bottom;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform-origin: top;
+    transform: translateY(100%);
+  }
+}
